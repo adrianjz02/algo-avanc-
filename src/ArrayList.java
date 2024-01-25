@@ -3,30 +3,30 @@ public class ArrayList {
     String[] data;
     int nb;
 
-
     public ArrayList() {
         this.data = new String[4];
         this.nb = 0;
     }
 
-    void ajout(String s) {
+    boolean ajout(String s) {
         ensureCapacity(this.nb + 1);
         this.data[nb] = s;
         nb++;
+        return true;
     }
 
     void ensureCapacity(int n) {
-        if ( n <= data.length) {
+        if (n <= data.length) {
             return;
         }
-        String[] tab2 = new String[2* data.length];
-        for (int i = 0; i < data.length; i ++) {
+        String[] tab2 = new String[2 * data.length];
+        for (int i = 0; i < data.length; i++) {
             tab2[i] = data[i];
         }
         this.data = tab2;
     }
 
-    String  get(int i ) {
+    String get(int i) {
 
         return this.data[i];
     }
@@ -35,8 +35,8 @@ public class ArrayList {
     public String toString() {
         StringBuilder sb = new StringBuilder();
         for (String i : data) {
-            if(i != null)
-            sb.append(i);
+            if (i != null)
+                sb.append(i);
         }
         return sb.toString();
     }
@@ -46,8 +46,8 @@ public class ArrayList {
         System.out.println(alist.toString());
         alist.ajout("");
         System.out.println(alist.toString());
-        for(int i=0 ; i<9 ;i++ ){
-            alist.ajout("test"+i);
+        for (int i = 0; i < 9; i++) {
+            alist.ajout("test" + i);
         }
         System.out.println(alist.toString());
         System.out.println(alist.get(0));
