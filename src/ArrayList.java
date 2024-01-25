@@ -26,9 +26,11 @@ public class ArrayList {
         this.data = tab2;
     }
 
-    String get(int i) {
-
-        return this.data[i];
+    String  get(int i ) {
+        if(i>=0 && i<data.length){
+            return this.data[i];
+        } 
+        return "erreur";
     }
 
     @Override
