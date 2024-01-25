@@ -11,11 +11,17 @@ public class ArrayList {
     boolean ajout(String s) {
         ensureCapacity(this.nb + 1);
         this.data[nb] = s;
-        nb++;
-        return true;
+        for (String i : this.data) {
+            nb++;
+            if (i == s) {
+                return true;
+            }
+        }
+        return false;
+
     }
 
-    void ensureCapacity(int n) {
+    public void ensureCapacity(int n) {
         if (n <= data.length) {
             return;
         }
@@ -26,7 +32,7 @@ public class ArrayList {
         this.data = tab2;
     }
 
-    String get(int i) {
+    public String get(int i) {
         if (i >= 0 && i < data.length) {
             return this.data[i];
         }
