@@ -44,12 +44,21 @@ public class ArrayList {
     public static void main(String[] args) {
         ArrayList alist = new ArrayList();
         System.out.println(alist.toString());
-        alist.ajout("test");
+        alist.ajout("test1");
         System.out.println(alist.toString());
-        alist.ajout("test");
+        alist.ajout("test2");
+        alist.ajout("test3");
+        alist.ajout("test4");
+        alist.ajout("test5");
+        alist.ajout("test6");
+        alist.ajout("test7");
+        alist.ajout("test8");
+        alist.ajout("test9");
+        alist.ajout("test10");
+        alist.ajout("test11");
+        alist.ajout("test12");
         System.out.println(alist.toString());
-        System.out.println(alist.get(1));
-
+        System.out.println(alist.get(0));
 
     }
 }
