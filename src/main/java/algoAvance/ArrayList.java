@@ -1,3 +1,5 @@
+package algoAvance;
+
 public class ArrayList {
 
     String[] data;
@@ -54,7 +56,7 @@ public class ArrayList {
         System.out.println(alist.toString());
         alist.ajout("");
         System.out.println(alist.toString());
-        for (int i = 0; i < 9; i++) {
+        for (int i = 0; i < 12; i++) {
             alist.ajout("test" + i);
         }
         System.out.println(alist.toString());
